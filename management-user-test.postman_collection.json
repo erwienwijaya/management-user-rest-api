@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "3c7028f3-cf6c-46ca-9d9a-fd70451c8470",
+		"name": "management-user-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Login-Get-Token-Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456789",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login-Refresh-Token-Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "refresh",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzNjEyNjIzMywiaWF0IjoxNjM2MDM5ODMzLCJqdGkiOiIzMDRhMTY5ODliODE0OWMxYWQ3MzFlYWUzY2RmMzM2MyIsInVzZXJfaWQiOjF9.2oJvHq0Lk3ActLBgV_oULOr79y9oM6WA44HfPdPvoh8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Non-Admin",
+			"item": [
+				{
+					"name": "Login-Get-Token-NonAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "erwien",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "B1smill4h",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/token/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login-Refresh-Token-NonAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "refresh",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzNjEyNjQwNSwiaWF0IjoxNjM2MDQwMDA1LCJqdGkiOiI0YzBjYWYyNGE4MzE0ZDBkODJkOTZlMzRiZWZjNDEyOCIsInVzZXJfaWQiOjJ9.5nuF1PvxrDxO_Ib-Y38l15XScMfLWg3hbotzRV72Lmg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/token/refresh/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User-List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2MDQwNDYxLCJpYXQiOjE2MzYwNDAwMDUsImp0aSI6IjJjN2JiYWVmOGUzOTRiMDdiMzk3ZjY1ZGQ0ZmQ0YTJmIiwidXNlcl9pZCI6Mn0.VVBXpxWGs8QlFIKD5wA31MaTaSuCOexkGC2G8CBKdwE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						""
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "andrew@test.com",
+							"disabled": true
+						},
+						{
+							"key": "first_name",
+							"value": "andrew",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "deckine",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "6188333635367",
+							"disabled": true
+						},
+						{
+							"key": "active",
+							"value": "true",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2MDQxMTQwLCJpYXQiOjE2MzYwMzk4MzMsImp0aSI6IjBmZmFhNzc5ODQ3NjQyZTRhYjlmZWJjNGUwOWMwNWQyIiwidXNlcl9pZCI6MX0.gQL178k4W6VVHuz3z89GumN8ipON3lBMC5ApSMlwaPk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"bossa@test.com\",\n    \"first_name\":\"bossa\",\n    \"last_name\":\"vice\",\n    \"phone\":\"628837439490321\",\n    \"active\":false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/create/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-By-Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2MDQxOTE0LCJpYXQiOjE2MzYwMzk4MzMsImp0aSI6IjRlY2I4YWM1Yjk1YTQxYzJiNzIxMzdlNjZhNzA2YzNhIiwidXNlcl9pZCI6MX0.pXWNbUb-q-eGzrc-BH3_Qo6TDpzpnFAyhZIp5bqQQbs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/users/alfred@test.com/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"alfred@test.com",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Patch",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM2MDQxNjI1LCJpYXQiOjE2MzYwMzk4MzMsImp0aSI6IjM3N2MxZjU2NmZlNjQyYjc5ZjEyZmYyMjkxYThlNjBlIiwidXNlcl9pZCI6MX0.A95_qO6lrpsiVdpMRl5nlujSeTHGqPKXnVCxy-WCpPQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"last_name\": \"hello\",\n    \"phone\": \"62988373788\",\n    \"active\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/update/alfred@test.com/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"update",
+						"alfred@test.com",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User-Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

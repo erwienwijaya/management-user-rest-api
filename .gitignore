@@ -1,3 +1,8 @@
+/src/__pycache__
+/src/acl_user/__pycache__
+/src/acl_user/api/__pycache__
+/src/acl_user/migrations/__pycache__
+/src/src_test/__pycache__
 /venv
 /.idea
 /.vscode
