@@ -22,3 +22,4 @@ Requirement development:
 
 ## Documentation
 - Access the API documentation at: `http://localhost:8000/api/documentation`
+- How to Authorize : `Bearer <token>`
