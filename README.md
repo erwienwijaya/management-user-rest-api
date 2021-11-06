@@ -19,3 +19,6 @@ Requirement development:
 - Install requirements dependencies: `pip install -r requirements.txt`
 - Run django server: `python3 manage.py runserver`
 - Access the project at: `http://localhost:8000`
+
+## Documentation
+- Access the API documentation at: `http://localhost:8000/api/documentation`
