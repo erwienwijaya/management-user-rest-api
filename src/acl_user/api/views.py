@@ -17,7 +17,7 @@ from rest_framework.response import Response
 
 class UsersListApi(ListAPIView):
     permission_classes = [IsAuthenticatedOrReadOnly]
-    queryset = UserList.objects.all().order_by('created_at')
+    queryset = UserList.objects.all().order_by('-created_at')
     serializer_class = UserListModelSerializers
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['email', 'first_name','last_name','phone','active']

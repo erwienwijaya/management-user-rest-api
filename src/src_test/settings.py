@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'django_filters',
     'acl_user',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -167,4 +168,14 @@ JWT_AUTH = {
     'JWT_REFRESH_EXPIRATION_DELTA': timedelta(minutes=3),
     'JWT_AUTH_HEADER_PREFIX': 'Bearer',
     'JWT_AUTH_COOKIE': None,
+}
+
+SWAGGER_SETTINGS = {
+   'SECURITY_DEFINITIONS': {
+       'Auth Token Bearer <JWT>': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+      }
+  }
 }
