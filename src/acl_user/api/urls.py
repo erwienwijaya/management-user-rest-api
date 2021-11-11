@@ -9,9 +9,9 @@ from .views import (
 
 app_name = 'users'
 urlpatterns = [
-    path('', UsersListApi.as_view(), name='userlist'),
-    path('create/', UsersCreateApi.as_view(), name='usercreate'),
-    path('<email>/', UsersListApiById.as_view(), name='userlistbyid'),
-    path('update/<email>/', UsersUpdateApi.as_view(), name='userupdate'),
-    path('delete/<email>/', UsersDeleteApi.as_view(), name='userdelete'),
+    path('', UsersListApi.as_view(), name='user-list'),
+    path('create/', UsersCreateApi.as_view(), name='user-create'),
+    path('<email>/', UsersListApiById.as_view(), name='user-list-by-id'),
+    path('update/<email>/', UsersUpdateApi.as_view(), name='user-update'),
+    path('delete/<email>/', UsersDeleteApi.as_view(), name='user-delete'),
 ]
