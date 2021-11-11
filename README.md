@@ -16,7 +16,7 @@ Requirement development:
 - Install virtual environment: `pip3 install virtualenv`
 - Create virtual environment: `virtualenv -p python3 venv` or `virtualenv -m python3 venv` 
 - Activate virtualenv `source venv/bin/activate`
-- Install requirements dependencies: `pip install -r requirements.txt`
+- Install requirements dependencies: `pip3 install -r requirements.txt`
 - Run django server: `python3 manage.py runserver`
 - Access the project at: `http://localhost:8000`
 
