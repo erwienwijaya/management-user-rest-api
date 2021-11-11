@@ -20,7 +20,7 @@ Requirement development:
 - Run django server: `python3 manage.py runserver`
 - Access the project at: `http://localhost:8000`
 
-## Installation
+## Testing
 - Run django test: `python3 manage.py test`
 
 ## Documentation
