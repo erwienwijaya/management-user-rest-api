@@ -6,7 +6,7 @@ from rest_framework.generics import (
     DestroyAPIView,
     RetrieveUpdateAPIView,
 )
-from rest_framework.permissions import IsAdminUser,IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAdminUser,IsAuthenticatedOrReadOnly,IsAuthenticated
 from django_filters.rest_framework import DjangoFilterBackend
 
 from .serializers import UserListModelSerializers

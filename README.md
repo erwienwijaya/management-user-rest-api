@@ -20,6 +20,9 @@ Requirement development:
 - Run django server: `python3 manage.py runserver`
 - Access the project at: `http://localhost:8000`
 
+## Installation
+- Run django test: `python3 manage.py test`
+
 ## Documentation
 - Access the API documentation at: `http://localhost:8000/api/documentation`
 - How to authorize: `Bearer <JWT>`
