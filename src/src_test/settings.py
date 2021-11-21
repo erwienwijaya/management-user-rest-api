@@ -177,5 +177,6 @@ SWAGGER_SETTINGS = {
             'name': 'Authorization',
             'in': 'header'
       }
-  }
+  },
+  'LOGIN_URL' : '/admin'
 }
