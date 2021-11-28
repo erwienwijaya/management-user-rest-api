@@ -12,7 +12,7 @@ Requirement development:
 
 ## Installation
 
-- Clone this repository `git clone git@github.com:erwienwijaya/management-user-rest-api.git`
+- Clone this repository `git clone https://github.com/erwienwijaya/management-user-rest-api.git`
 - Install virtual environment: `pip3 install virtualenv`
 - Create virtual environment: `virtualenv -p python3 venv` or `virtualenv -m python3 venv` 
 - Activate virtualenv `source venv/bin/activate`
